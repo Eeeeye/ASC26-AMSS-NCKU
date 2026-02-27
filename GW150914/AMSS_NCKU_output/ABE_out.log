@@ -1,0 +1,227 @@
+
+ /////////////////////////////////////////////////////////////// 
+ AMSS-NCKU Begin !!! 
+ /////////////////////////////////////////////////////////////// 
+
+                                 new run
+   simulation with cpu numbers = 8
+               simulation time = (0, 5)
+ simulation steps for this run = 10000000
+                Courant number = 0.5
+            Initial Data Type: Numerical Ansorg TwoPuncture
+             Symmetry setting: Equatorial
+ Courant = 0.5
+ artificial dissipation for shell patches = 0.15
+ artificial dissipation for fixed levels = 0.15
+ artificial dissipation for moving levels = 0.15
+ Dumpt Time = 100
+ Check Time = 100
+ Analysis Time = 0.1
+ Analysis level = 0
+ checkfile = bssn.chk
+ fourth order finite difference is used
+///////////////////////////////////////////////////////////////
+-----------------------------------------------------------------------
+ spherical integration for wave form extraction with Gauss method      
+ N_phi   = 384
+ N_theta = 192
+-----------------------------------------------------------------------
+ chitiny = 1e-05
+ time refinement start from level #3
+ checkpoint class created 
+ BSSN class successfully created 
+ you have setted 167 grid functions.
+
+ cgh has levels: 9
+
+ level #0 has boxes: 1
+ #0 box is  (-320:320,-320:320,0:320).
+ level #1 has boxes: 1
+ #0 box is  (-160:160,-160:160,0:160).
+ level #2 has boxes: 1
+ #0 box is  (-80:80,-80:80,0:80).
+ level #3 has boxes: 1
+ #0 box is  (-40:40,-40:40,0:40).
+ level #4 has boxes: 1
+ #0 box is  (-20:20,-20:20,0:20).
+ level #5 has boxes: 2
+ #0 box is  (-5:5,-0.625:9.375,0:5).
+ #1 box is  (-5:5,-10.625:-0.625,0:5).
+ level #6 has boxes: 2
+ #0 box is  (-2.5:2.5,1.97917:6.97917,0:2.5).
+ #1 box is  (-2.5:2.5,-8.02083:-3.02083,0:2.5).
+ level #7 has boxes: 2
+ #0 box is  (-1.25:1.25,3.22917:5.72917,0:1.25).
+ #1 box is  (-1.25:1.25,-6.77083:-4.27083,0:1.25).
+ level #8 has boxes: 2
+ #0 box is  (-0.625:0.625,3.82812:5.07812,0:0.625).
+ #1 box is  (-0.625:0.625,-6.17188:-4.92188,0:0.625).
+
+ moving levels are lev #5--8
+
+ belong to level 0
+ shape: [96,96,48] resolution: [6.66667,6.66667,6.66667]
+ range:(-320:320,-320:320,0:320)
+ belong to level 1
+ shape: [96,96,48] resolution: [3.33333,3.33333,3.33333]
+ range:(-160:160,-160:160,0:160)
+ belong to level 2
+ shape: [96,96,48] resolution: [1.66667,1.66667,1.66667]
+ range:(-80:80,-80:80,0:80)
+ belong to level 3
+ shape: [96,96,48] resolution: [0.833333,0.833333,0.833333]
+ range:(-40:40,-40:40,0:40)
+ belong to level 4
+ shape: [96,96,48] resolution: [0.416667,0.416667,0.416667]
+ range:(-20:20,-20:20,0:20)
+ belong to level 5
+ shape: [48,96,24] resolution: [0.208333,0.208333,0.208333]
+ range:(-5:5,-10.625:9.375,0:5)
+ belong to level 6
+ shape: [48,48,24] resolution: [0.104167,0.104167,0.104167]
+ range:(-2.5:2.5,1.97917:6.97917,0:2.5)
+ belong to level 6
+ shape: [48,48,24] resolution: [0.104167,0.104167,0.104167]
+ range:(-2.5:2.5,-8.02083:-3.02083,0:2.5)
+ belong to level 7
+ shape: [48,48,24] resolution: [0.0520833,0.0520833,0.0520833]
+ range:(-1.25:1.25,3.22917:5.72917,0:1.25)
+ belong to level 7
+ shape: [48,48,24] resolution: [0.0520833,0.0520833,0.0520833]
+ range:(-1.25:1.25,-6.77083:-4.27083,0:1.25)
+ belong to level 8
+ shape: [48,48,24] resolution: [0.0260417,0.0260417,0.0260417]
+ range:(-0.625:0.625,3.82812:5.07812,0:0.625)
+ belong to level 8
+ shape: [48,48,24] resolution: [0.0260417,0.0260417,0.0260417]
+ range:(-0.625:0.625,-6.17188:-4.92188,0:0.625)
+
+ initial information of 2 Black Hole(s) 
+        Mass           x           y           z              Px              Py          Pz          Sx          Sy          Sz
+     0.51842           0     4.46154           0      -0.0953015    -0.000845415           0           0           0   0.0950911
+    0.391936           0    -5.53846           0       0.0953015     0.000845415           0           0           0  -0.0915645
+
+ Read initial data from Ansorg's solver, please be sure the input parameters for black holes are puncture parameters!! 
+
+  reading data from Ansorg.psid
+  found data with dimensions 50 x 50 x 26 = 65000
+  bhx1 = 0
+  bhy1 = 4.46154
+  bhz1 = 0
+  bhx2 = 0
+  bhy2 = -5.53846
+  bhz2 = 0
+  read 65000 data lines
+
+
+ Before Evolve, it takes 2.86083 seconds
+
+
+ Timestep # 1: integrating to time: 0.416667    Computer used 37.6937 seconds! 
+ Memory usage: current 6395/799.4/6395MB, peak 6746/843.2/6746MB
+
+ puncture position: no. 0 = (-0.00133511 4.46153 1.35373e-09)
+ puncture position: no. 1 = (0.00302945 -5.5384 7.3647e-08)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 2: integrating to time: 0.833333    Computer used 31.7145 seconds! 
+ Memory usage: current 6393/799.1/6393MB, peak 6747/843.4/6747MB
+
+ puncture position: no. 0 = (-0.0115113 4.46147 4.46282e-09)
+ puncture position: no. 1 = (0.0206158 -5.53805 3.71512e-08)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 3: integrating to time: 1.25    Computer used 31.2695 seconds! 
+ Memory usage: current 6464/808/6464MB, peak 6749/843.6/6749MB
+
+ puncture position: no. 0 = (-0.0298429 4.46122 1.31256e-08)
+ puncture position: no. 1 = (0.0486338 -5.53742 1.00583e-07)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 4: integrating to time: 1.66667    Computer used 30.4293 seconds! 
+ Memory usage: current 6459/807.3/6459MB, peak 6771/846.4/6771MB
+
+ puncture position: no. 0 = (-0.0532184 4.46075 2.76619e-08)
+ puncture position: no. 1 = (0.0823736 -5.53632 9.03473e-07)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 5: integrating to time: 2.08333    Computer used 29.6839 seconds! 
+ Memory usage: current 6768/846/6768MB, peak 6772/846.5/6772MB
+
+ puncture position: no. 0 = (-0.0799702 4.46009 1.22963e-07)
+ puncture position: no. 1 = (0.119454 -5.53452 2.93434e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 6: integrating to time: 2.5    Computer used 37.6332 seconds! 
+ Memory usage: current 6457/807.1/6457MB, peak 6772/846.5/6772MB
+
+ puncture position: no. 0 = (-0.109144 4.45927 8.81954e-08)
+ puncture position: no. 1 = (0.158534 -5.53153 2.98262e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 7: integrating to time: 2.91667    Computer used 36.9333 seconds! 
+ Memory usage: current 6763/845.4/6763MB, peak 6773/846.6/6773MB
+
+ puncture position: no. 0 = (-0.139959 4.45807 3.6679e-06)
+ puncture position: no. 1 = (0.198702 -5.5275 5.47494e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 8: integrating to time: 3.33333    Computer used 38.2931 seconds! 
+ Memory usage: current 6765/845.7/6765MB, peak 6773/846.7/6773MB
+
+ puncture position: no. 0 = (-0.171776 4.45562 1.04982e-05)
+ puncture position: no. 1 = (0.240827 -5.52369 2.48052e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 9: integrating to time: 3.75    Computer used 38.0586 seconds! 
+ Memory usage: current 6764/845.5/6764MB, peak 6773/846.7/6773MB
+
+ puncture position: no. 0 = (-0.204612 4.45447 2.73319e-06)
+ puncture position: no. 1 = (0.283954 -5.52007 1.66963e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 10: integrating to time: 4.16667    Computer used 35.3306 seconds! 
+ Memory usage: current 6463/807.8/6463MB, peak 6773/846.7/6773MB
+
+ puncture position: no. 0 = (-0.238329 4.45276 2.24859e-06)
+ puncture position: no. 1 = (0.327899 -5.51639 1.08074e-06)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 11: integrating to time: 4.58333    Computer used 35.8804 seconds! 
+ Memory usage: current 6766/845.7/6766MB, peak 6775/846.9/6775MB
+
+ puncture position: no. 0 = (-0.272891 4.45019 1.66993e-06)
+ puncture position: no. 1 = (0.37238 -5.5124 4.6887e-07)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 12: integrating to time: 5    Computer used 38.1683 seconds! 
+ Memory usage: current 6768/845.9/6768MB, peak 6775/846.9/6775MB
+
+ puncture position: no. 0 = (-0.308126 4.44696 8.84099e-07)
+ puncture position: no. 1 = (0.417152 -5.50796 1.35325e-07)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 13: integrating to time: 5.41667    Computer used 36.4674 seconds! 
+
+ Total Evolve Time: 458.744 seconds!
+ Total Running Time: 461.605 seconds!
+
+
+ =============================================================== 
+ Simulation is successfully done!! 
+ =============================================================== 
+
+ This run used 461.758 seconds! 
+

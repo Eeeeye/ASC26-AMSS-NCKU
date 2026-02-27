@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/mnt/ASC1505/AMSS-NCKU-baseline/AMSS_NCKU_Program.py", line 61, in <module>
+    inputvalue = input()
+                 ^^^^^^^
+EOFError: EOF when reading a line
