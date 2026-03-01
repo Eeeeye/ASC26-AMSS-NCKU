@@ -1,0 +1,104 @@
+Job running on nodes: wx-ms-w7900d-0033
+
+------------------------------------------------------------------------------------------
+
+     Numerical Relativity AMSS-NCKU  
+
+     Author of AMSS-NCKU Code: Zhou-Jian Cao et al. 
+     Author of AMSS-NCKU Python Interface: Xiao Qu 
+
+     AMSS-NCKU is an open source numerical relativity code 
+     It can be used to simulate the dynamical evolution on mergering process of black hole systems, 
+ calculating the variation of gravitational field, black holes' trajectories, and gravitational wave 
+ emissions through directly solving the Einstein field equations  
+
+     This AMSS-NCKU code uses the finite-difference method to evaluate the numerical simulation. The 
+ finite-difference schemes can be chosen as: 2nd order, 4th order, 6th order, 8th order. 
+     The computation equation form in AMSS-NCKU code can be chosen as: BSSN equations, Z4C equations, 
+ BSSN equations coupled with scalars (in f(R) theory), BSSN equations coupled with electromagnetic 
+ fields. 
+     The numerical grid system in this code includes: patch AMR grid, shell-patch AMR grid. 
+
+     Furthermore, This code has fulfilled the CPU and GPU hybrid calculation. 
+
+------------------------------------------------------------------------------------------
+
+ Output dictionary has been existed !!!  
+ If you want to overwrite the existing file directory, please input 'continue' in the terminal !! 
+ If you want to retain the existing file directory, please input 'stop' in the terminal to stop the 
+ simulation. Then you can reset the output dictionary in the input script file AMSS_NCKU_Input.py !!! 
+
+ Continue the calculation !!! 
+
+ Output directory has been generated 
+
+------------------------------------------------------------------------------------------
+
+ Printing the basic parameter and setting in the AMSS-NCKU simulation 
+
+ The number of MPI processes in the AMSS-NCKU simulation =  8
+
+ The form of computational equation  =  BSSN
+ The initial data in this simulation =  Ansorg-TwoPuncture
+
+ Starting evolution time   =  0.0
+ Final evolution time      =  5.0
+ Maximal iteration number  =  10000000
+ Courant factor            =  0.5
+ Strength of dissipation   =  0.15
+ Symmetry of system        =  equatorial-symmetry
+ The Runge-Kutta scheme in the time evolution   =  runge-kutta-45
+ The finite-difference scheme in the simulation =  4th-order
+
+ The static AMR grid type =  Linear
+ The moving AMR grid type =  Linear
+
+ The number of static AMR grid levels =  5
+ The number of moving AMR grid levels =  4
+ The number of total  AMR grid levels =  9
+
+ The grid number of each static AMR grid level =  96
+ The grid number of each moving AMR grid level =  48
+
+ The scale for largest  static AMR grid in X direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Y direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Z direction =  [-320.  320.]
+ The scale for smallest static AMR grid in X direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Y direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Z direction =  [-20.  20.]
+
+ The scale for largest  moving AMR grid =  [-5.  5.]
+ The scale for smallest moving AMR grid =  [-0.625  0.625]
+
+ The coarest resolution for static AMR grid =  6.666666666666667
+ The finest  resolution for static AMR grid =  0.4166666666666667
+ The coarest resolution for moving AMR grid =  0.20833333333333334
+ The finest  resolution for moving AMR grid =  0.026041666666666668
+
+ The time refinement starts from AMR grid level =  4
+ The time interval in each step for coarest AMR grid during time evaluation =  0.4166666666666667
+
+ This simulation only uses the Patch AMR grid structure, the Shell-Patch is not used 
+
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+
+ Printing the puncture information 
+
+ The information for 1 puncture 
+ Mass(1) =   0.553846,  Charge(1) =   0.000000,  a(1)  =   0.310000
+ X(1)    =   0.000000,  Y(1)      =   4.461538,  Z(1)  =   0.000000
+ Px(1)   =  -0.095302,  Py(1)     =  -0.000845,  Pz(1) =   0.000000
+ Jx(1)   =   0.000000,  Jy(1)     =   0.000000,  Jz(1) =   0.095091
+
+ The information for 2 puncture 
+ Mass(2) =   0.446154,  Charge(2) =   0.000000,  a(2)  =  -0.460000
+ X(2)    =   0.000000,  Y(2)      =  -5.538462,  Z(2)  =   0.000000
+ Px(2)   =   0.095302,  Py(2)     =   0.000845,  Pz(2) =   0.000000
+ Jx(2)   =   0.000000,  Jy(2)     =   0.000000,  Jz(2) =  -0.091564
+
+------------------------------------------------------------------------------------------
+
+ Generating the AMSS-NCKU input parfile for the ABE executable. 
+

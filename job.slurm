@@ -1,15 +1,21 @@
 #!/bin/bash
-#SBATCH --job-name=AMSS_Base      # 作业名称
-#SBATCH --nodes=1                 # 请求1个计算节点
-#SBATCH --ntasks=8                # 请求8个MPI进程槽位
-#SBATCH --cpus-per-task=1         # 每个MPI进程分配1个物理核心
-#SBATCH --output=baseline_%j.out  # 标准输出日志
-#SBATCH --error=baseline_%j.err   # 标准错误日志
+#SBATCH --job-name=AMSS_Base
+#SBATCH --nodes=1
+#SBATCH --ntasks=16               # 我们确定的 16 核上限
+#SBATCH --cpus-per-task=1
+#SBATCH --output=baseline_%j.out
+#SBATCH --error=baseline_%j.err
 
-cd /mnt/$USER/AMSS-NCKU-baseline
+# 🌟 专家修复：让 Slurm 自动进入你执行 sbatch 时所在的目录！
+cd $SLURM_SUBMIT_DIR
+export PYTHONPATH=/mnt/$USER/python_packages:$PYTHONPATH
 
-# 打印当前分配到的节点信息
+mkdir -p /mnt/$USER/mytmp
+export TMPDIR=/mnt/$USER/mytmp
+
 echo "Job running on nodes: $SLURM_JOB_NODELIST"
+echo "Current working directory: $(pwd)"
 
-# 🌟 核心破局点：使用 yes 命令无限自动回复回车，并关闭 python 的输出缓冲 (-u)
 yes "continue" | python3 -u AMSS_NCKU_Program.py
+
+rm -rf /mnt/$USER/mytmp

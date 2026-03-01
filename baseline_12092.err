@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/ASC1505/AMSS-NCKU-baseline/AMSS_NCKU_Program.py", line 232, in <module>
+    makefile_and_run.makefile_ABE()
+  File "/mnt/ASC1505/AMSS-NCKU-baseline/makefile_and_run.py", line 15, in makefile_ABE
+    raise subprocess.CalledProcessError(makefile_return_code, makefile_command)
+subprocess.CalledProcessError: Command 'make -j8 ABE' returned non-zero exit status 2.

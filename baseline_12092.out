@@ -1,0 +1,230 @@
+Job running on nodes: wx-ms-w7900d-0032
+
+------------------------------------------------------------------------------------------
+
+     Numerical Relativity AMSS-NCKU  
+
+     Author of AMSS-NCKU Code: Zhou-Jian Cao et al. 
+     Author of AMSS-NCKU Python Interface: Xiao Qu 
+
+     AMSS-NCKU is an open source numerical relativity code 
+     It can be used to simulate the dynamical evolution on mergering process of black hole systems, 
+ calculating the variation of gravitational field, black holes' trajectories, and gravitational wave 
+ emissions through directly solving the Einstein field equations  
+
+     This AMSS-NCKU code uses the finite-difference method to evaluate the numerical simulation. The 
+ finite-difference schemes can be chosen as: 2nd order, 4th order, 6th order, 8th order. 
+     The computation equation form in AMSS-NCKU code can be chosen as: BSSN equations, Z4C equations, 
+ BSSN equations coupled with scalars (in f(R) theory), BSSN equations coupled with electromagnetic 
+ fields. 
+     The numerical grid system in this code includes: patch AMR grid, shell-patch AMR grid. 
+
+     Furthermore, This code has fulfilled the CPU and GPU hybrid calculation. 
+
+------------------------------------------------------------------------------------------
+
+ Output dictionary has been existed !!!  
+ If you want to overwrite the existing file directory, please input 'continue' in the terminal !! 
+ If you want to retain the existing file directory, please input 'stop' in the terminal to stop the 
+ simulation. Then you can reset the output dictionary in the input script file AMSS_NCKU_Input.py !!! 
+
+ Continue the calculation !!! 
+
+ Output directory has been generated 
+
+------------------------------------------------------------------------------------------
+
+ Printing the basic parameter and setting in the AMSS-NCKU simulation 
+
+ The number of MPI processes in the AMSS-NCKU simulation =  8
+
+ The form of computational equation  =  BSSN
+ The initial data in this simulation =  Ansorg-TwoPuncture
+
+ Starting evolution time   =  0.0
+ Final evolution time      =  5.0
+ Maximal iteration number  =  10000000
+ Courant factor            =  0.5
+ Strength of dissipation   =  0.15
+ Symmetry of system        =  equatorial-symmetry
+ The Runge-Kutta scheme in the time evolution   =  runge-kutta-45
+ The finite-difference scheme in the simulation =  4th-order
+
+ The static AMR grid type =  Linear
+ The moving AMR grid type =  Linear
+
+ The number of static AMR grid levels =  5
+ The number of moving AMR grid levels =  4
+ The number of total  AMR grid levels =  9
+
+ The grid number of each static AMR grid level =  96
+ The grid number of each moving AMR grid level =  48
+
+ The scale for largest  static AMR grid in X direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Y direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Z direction =  [-320.  320.]
+ The scale for smallest static AMR grid in X direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Y direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Z direction =  [-20.  20.]
+
+ The scale for largest  moving AMR grid =  [-5.  5.]
+ The scale for smallest moving AMR grid =  [-0.625  0.625]
+
+ The coarest resolution for static AMR grid =  6.666666666666667
+ The finest  resolution for static AMR grid =  0.4166666666666667
+ The coarest resolution for moving AMR grid =  0.20833333333333334
+ The finest  resolution for moving AMR grid =  0.026041666666666668
+
+ The time refinement starts from AMR grid level =  4
+ The time interval in each step for coarest AMR grid during time evaluation =  0.4166666666666667
+
+ This simulation only uses the Patch AMR grid structure, the Shell-Patch is not used 
+
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+
+ Printing the puncture information 
+
+ The information for 1 puncture 
+ Mass(1) =   0.553846,  Charge(1) =   0.000000,  a(1)  =   0.310000
+ X(1)    =   0.000000,  Y(1)      =   4.461538,  Z(1)  =   0.000000
+ Px(1)   =  -0.095302,  Py(1)     =  -0.000845,  Pz(1) =   0.000000
+ Jx(1)   =   0.000000,  Jy(1)     =   0.000000,  Jz(1) =   0.095091
+
+ The information for 2 puncture 
+ Mass(2) =   0.446154,  Charge(2) =   0.000000,  a(2)  =  -0.460000
+ X(2)    =   0.000000,  Y(2)      =  -5.538462,  Z(2)  =   0.000000
+ Px(2)   =   0.095302,  Py(2)     =   0.000845,  Pz(2) =   0.000000
+ Jx(2)   =   0.000000,  Jy(2)     =   0.000000,  Jz(2) =  -0.091564
+
+------------------------------------------------------------------------------------------
+
+ Generating the AMSS-NCKU input parfile for the ABE executable. 
+
+
+ Setting Puncture's position and momentum 
+
+
+ Wirte Down The Grid Information 
+
+ Number of Total Grid Level =  9
+ Number of Static Grid Level =  5
+ Number of Moving Grid Level =  4
+
+
+ Setting the demanded numerical grid 
+
+ adjusting the static gird points, making the original point (0,0,0) to the static gird points 
+
+
+ adjusting the moving gird points, ensuring the alliance of moving grids points and static grids points 
+
+ adjust_puncture[5,0,0] = 0.0 
+ adjust_puncture[5,0,1] = 4.375000000000002 
+ adjust_puncture[5,0,2] = 0.0 
+ adjust_puncture[5,1,0] = 0.0 
+ adjust_puncture[5,1,1] = -5.624999999999999 
+ adjust_puncture[5,1,2] = 0.0 
+ adjust_puncture[6,0,0] = 0.0 
+ adjust_puncture[6,0,1] = 4.479166666666669 
+ adjust_puncture[6,0,2] = 0.0 
+ adjust_puncture[6,1,0] = 0.0 
+ adjust_puncture[6,1,1] = -5.520833333333333 
+ adjust_puncture[6,1,2] = 0.0 
+ adjust_puncture[7,0,0] = 0.0 
+ adjust_puncture[7,0,1] = 4.479166666666669 
+ adjust_puncture[7,0,2] = 0.0 
+ adjust_puncture[7,1,0] = 0.0 
+ adjust_puncture[7,1,1] = -5.520833333333332 
+ adjust_puncture[7,1,2] = 0.0 
+ adjust_puncture[8,0,0] = 0.0 
+ adjust_puncture[8,0,1] = 4.453125000000002 
+ adjust_puncture[8,0,2] = 0.0 
+ adjust_puncture[8,1,0] = 0.0 
+ adjust_puncture[8,1,1] = -5.546874999999998 
+ adjust_puncture[8,1,2] = 0.0 
+
+ The moving grid puncture position adjustment is done 
+
+
+ The input parfile for AMSS-NCKU C++ executable file ABE has been generated. 
+ However, the input relevant to TwoPuncture need to be appended later. 
+
+
+ Schematically plot the numerical grid structure. 
+
+
+ Automatically generating the macro file for AMSS-NCKU C++ executable file ABE 
+ (Based on the finite-difference numerical scheme) 
+
+ AMSS-NCKU macro file macrodef.h has been generated. 
+ AMSS-NCKU macro file macrodef.fh has been generated. 
+
+ Preparing to compile and run the AMSS-NCKU code as requested 
+ Compiling the AMSS-NCKU code based on the generated macro files 
+
+
+ Compiling the AMSS-NCKU executable file ABE/ABEGPU 
+
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c ABE.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o ABE.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Ansorg.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Ansorg.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Block.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Block.o
+mpif90 -c zbesh.for -o zbesh.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c monitor.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o monitor.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Parallel.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Parallel.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c MPatch.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o MPatch.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c var.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o var.o
+var.C: In constructor ‘var::var(const char*, int, double, double, double)’:
+var.C:25:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   25 |   sprintf(name, namei);
+      |   ~~~~~~~^~~~~~~~~~~~~
+zbesh.for:7331:72:
+
+ 7331 |       END
+      |                                                                        ^
+Fatal Error: error writing to /tmp/ccguRcx6.s: No space left on device
+compilation terminated.
+make: *** [makefile:14: zbesh.o] Error 1
+make: *** Waiting for unfinished jobs....
+var.C: At top level:
+var.C:38:1: fatal error: error writing to /tmp/ccNKwadw.s: No space left on device
+   38 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: var.o] Error 1
+Ansorg.C:691:1: fatal error: error writing to /tmp/ccd2cWhk.s: No space left on device
+  691 | }
+      | ^
+compilation terminated.
+ABE.C: In function ‘int main(int, char**)’:
+ABE.C:219:25: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  219 |                   system(cmd);
+      |                   ~~~~~~^~~~~
+make: *** [makefile:11: Ansorg.o] Error 1
+Block.C:199:1: fatal error: error writing to /tmp/ccyEz1ys.s: No space left on device
+  199 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: Block.o] Error 1
+MPatch.C:1532:1: fatal error: error writing to /tmp/cc6biy3K.s: No space left on device
+ 1532 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: MPatch.o] Error 1
+monitor.C:173:1: fatal error: error writing to /tmp/ccaBuI1y.s: No space left on device
+  173 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: monitor.o] Error 1
+ABE.C: At top level:
+ABE.C:506:1: fatal error: error writing to /tmp/ccf2JB6u.s: No space left on device
+  506 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: ABE.o] Error 1
+Parallel.C:5791:1: fatal error: error writing to /tmp/ccymKgLb.s: No space left on device
+ 5791 | }
+      | ^
+compilation terminated.
+make: *** [makefile:11: Parallel.o] Error 1

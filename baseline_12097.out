@@ -1,0 +1,1005 @@
+Job running on nodes: wx-ms-w7900d-0032
+
+------------------------------------------------------------------------------------------
+
+     Numerical Relativity AMSS-NCKU  
+
+     Author of AMSS-NCKU Code: Zhou-Jian Cao et al. 
+     Author of AMSS-NCKU Python Interface: Xiao Qu 
+
+     AMSS-NCKU is an open source numerical relativity code 
+     It can be used to simulate the dynamical evolution on mergering process of black hole systems, 
+ calculating the variation of gravitational field, black holes' trajectories, and gravitational wave 
+ emissions through directly solving the Einstein field equations  
+
+     This AMSS-NCKU code uses the finite-difference method to evaluate the numerical simulation. The 
+ finite-difference schemes can be chosen as: 2nd order, 4th order, 6th order, 8th order. 
+     The computation equation form in AMSS-NCKU code can be chosen as: BSSN equations, Z4C equations, 
+ BSSN equations coupled with scalars (in f(R) theory), BSSN equations coupled with electromagnetic 
+ fields. 
+     The numerical grid system in this code includes: patch AMR grid, shell-patch AMR grid. 
+
+     Furthermore, This code has fulfilled the CPU and GPU hybrid calculation. 
+
+------------------------------------------------------------------------------------------
+
+ Output dictionary has been existed !!!  
+ If you want to overwrite the existing file directory, please input 'continue' in the terminal !! 
+ If you want to retain the existing file directory, please input 'stop' in the terminal to stop the 
+ simulation. Then you can reset the output dictionary in the input script file AMSS_NCKU_Input.py !!! 
+
+ Continue the calculation !!! 
+
+ Output directory has been generated 
+
+------------------------------------------------------------------------------------------
+
+ Printing the basic parameter and setting in the AMSS-NCKU simulation 
+
+ The number of MPI processes in the AMSS-NCKU simulation =  8
+
+ The form of computational equation  =  BSSN
+ The initial data in this simulation =  Ansorg-TwoPuncture
+
+ Starting evolution time   =  0.0
+ Final evolution time      =  5.0
+ Maximal iteration number  =  10000000
+ Courant factor            =  0.5
+ Strength of dissipation   =  0.15
+ Symmetry of system        =  equatorial-symmetry
+ The Runge-Kutta scheme in the time evolution   =  runge-kutta-45
+ The finite-difference scheme in the simulation =  4th-order
+
+ The static AMR grid type =  Linear
+ The moving AMR grid type =  Linear
+
+ The number of static AMR grid levels =  5
+ The number of moving AMR grid levels =  4
+ The number of total  AMR grid levels =  9
+
+ The grid number of each static AMR grid level =  96
+ The grid number of each moving AMR grid level =  48
+
+ The scale for largest  static AMR grid in X direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Y direction =  [-320.  320.]
+ The scale for largest  static AMR grid in Z direction =  [-320.  320.]
+ The scale for smallest static AMR grid in X direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Y direction =  [-20.  20.]
+ The scale for smallest static AMR grid in Z direction =  [-20.  20.]
+
+ The scale for largest  moving AMR grid =  [-5.  5.]
+ The scale for smallest moving AMR grid =  [-0.625  0.625]
+
+ The coarest resolution for static AMR grid =  6.666666666666667
+ The finest  resolution for static AMR grid =  0.4166666666666667
+ The coarest resolution for moving AMR grid =  0.20833333333333334
+ The finest  resolution for moving AMR grid =  0.026041666666666668
+
+ The time refinement starts from AMR grid level =  4
+ The time interval in each step for coarest AMR grid during time evaluation =  0.4166666666666667
+
+ This simulation only uses the Patch AMR grid structure, the Shell-Patch is not used 
+
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+
+ Printing the puncture information 
+
+ The information for 1 puncture 
+ Mass(1) =   0.553846,  Charge(1) =   0.000000,  a(1)  =   0.310000
+ X(1)    =   0.000000,  Y(1)      =   4.461538,  Z(1)  =   0.000000
+ Px(1)   =  -0.095302,  Py(1)     =  -0.000845,  Pz(1) =   0.000000
+ Jx(1)   =   0.000000,  Jy(1)     =   0.000000,  Jz(1) =   0.095091
+
+ The information for 2 puncture 
+ Mass(2) =   0.446154,  Charge(2) =   0.000000,  a(2)  =  -0.460000
+ X(2)    =   0.000000,  Y(2)      =  -5.538462,  Z(2)  =   0.000000
+ Px(2)   =   0.095302,  Py(2)     =   0.000845,  Pz(2) =   0.000000
+ Jx(2)   =   0.000000,  Jy(2)     =   0.000000,  Jz(2) =  -0.091564
+
+------------------------------------------------------------------------------------------
+
+ Generating the AMSS-NCKU input parfile for the ABE executable. 
+
+
+ Setting Puncture's position and momentum 
+
+
+ Wirte Down The Grid Information 
+
+ Number of Total Grid Level =  9
+ Number of Static Grid Level =  5
+ Number of Moving Grid Level =  4
+
+
+ Setting the demanded numerical grid 
+
+ adjusting the static gird points, making the original point (0,0,0) to the static gird points 
+
+
+ adjusting the moving gird points, ensuring the alliance of moving grids points and static grids points 
+
+ adjust_puncture[5,0,0] = 0.0 
+ adjust_puncture[5,0,1] = 4.375000000000002 
+ adjust_puncture[5,0,2] = 0.0 
+ adjust_puncture[5,1,0] = 0.0 
+ adjust_puncture[5,1,1] = -5.624999999999999 
+ adjust_puncture[5,1,2] = 0.0 
+ adjust_puncture[6,0,0] = 0.0 
+ adjust_puncture[6,0,1] = 4.479166666666669 
+ adjust_puncture[6,0,2] = 0.0 
+ adjust_puncture[6,1,0] = 0.0 
+ adjust_puncture[6,1,1] = -5.520833333333333 
+ adjust_puncture[6,1,2] = 0.0 
+ adjust_puncture[7,0,0] = 0.0 
+ adjust_puncture[7,0,1] = 4.479166666666669 
+ adjust_puncture[7,0,2] = 0.0 
+ adjust_puncture[7,1,0] = 0.0 
+ adjust_puncture[7,1,1] = -5.520833333333332 
+ adjust_puncture[7,1,2] = 0.0 
+ adjust_puncture[8,0,0] = 0.0 
+ adjust_puncture[8,0,1] = 4.453125000000002 
+ adjust_puncture[8,0,2] = 0.0 
+ adjust_puncture[8,1,0] = 0.0 
+ adjust_puncture[8,1,1] = -5.546874999999998 
+ adjust_puncture[8,1,2] = 0.0 
+
+ The moving grid puncture position adjustment is done 
+
+
+ The input parfile for AMSS-NCKU C++ executable file ABE has been generated. 
+ However, the input relevant to TwoPuncture need to be appended later. 
+
+
+ Schematically plot the numerical grid structure. 
+
+
+ Automatically generating the macro file for AMSS-NCKU C++ executable file ABE 
+ (Based on the finite-difference numerical scheme) 
+
+ AMSS-NCKU macro file macrodef.h has been generated. 
+ AMSS-NCKU macro file macrodef.fh has been generated. 
+
+ Preparing to compile and run the AMSS-NCKU code as requested 
+ Compiling the AMSS-NCKU code based on the generated macro files 
+
+
+ Compiling the AMSS-NCKU executable file ABE/ABEGPU 
+
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c ABE.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o ABE.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Ansorg.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Ansorg.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Block.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Block.o
+mpif90 -c zbesh.for -o zbesh.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c monitor.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o monitor.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Parallel.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Parallel.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c MPatch.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o MPatch.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c var.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o var.o
+var.C: In constructor ‘var::var(const char*, int, double, double, double)’:
+var.C:25:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   25 |   sprintf(name, namei);
+      |   ~~~~~~~^~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c cgh.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o cgh.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c bssn_class.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o bssn_class.o
+ABE.C: In function ‘int main(int, char**)’:
+ABE.C:219:25: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  219 |                   system(cmd);
+      |                   ~~~~~~^~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c surface_integral.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o surface_integral.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c ShellPatch.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o ShellPatch.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c bssnEScalar_class.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o bssnEScalar_class.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c perf.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o perf.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Z4c_class.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Z4c_class.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c NullShellPatch.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o NullShellPatch.o
+bssn_class.C: In member function ‘virtual void bssn_class::Read_Ansorg()’:
+bssn_class.C:1865:24: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ 1865 |     Ansorg read_ansorg("Ansorg.psid", order);
+      |                        ^~~~~~~~~~~~~
+bssnEScalar_class.C: In member function ‘virtual void bssnEScalar_class::Read_Ansorg()’:
+bssnEScalar_class.C:335:24: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  335 |     Ansorg read_ansorg("Ansorg.psid", order);
+      |                        ^~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c bssnEM_class.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o bssnEM_class.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c cpbc_util.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o cpbc_util.o
+Z4c_class.C: In member function ‘void Z4c_class::Check_extrop()’:
+Z4c_class.C:2396:28: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ 2396 |   SH->Dump_Data(StateList, "extrop", 0, 1);
+      |                            ^~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c z4c_rhs_point.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o z4c_rhs_point.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c checkpoint.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o checkpoint.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Parallel_bam.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Parallel_bam.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c scalar_class.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o scalar_class.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c transpbh.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o transpbh.o
+bssnEM_class.C: In member function ‘virtual void bssnEM_class::Read_Ansorg()’:
+bssnEM_class.C:486:24: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  486 |     Ansorg read_ansorg("Ansorg.psid", order);
+      |                        ^~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c NullShellPatch2.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o NullShellPatch2.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c NullShellPatch2_Evo.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o NullShellPatch2_Evo.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c writefile_f.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o writefile_f.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c enforce_algebra.f90 -o enforce_algebra.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c fmisc.f90 -o fmisc.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c initial_puncture.f90 -o initial_puncture.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c prolongrestrict.f90 -o prolongrestrict.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c prolongrestrict_cell.f90 -o prolongrestrict_cell.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c prolongrestrict_vertex.f90 -o prolongrestrict_vertex.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c rungekutta4_rout.f90 -o rungekutta4_rout.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c bssn_rhs.f90 -o bssn_rhs.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c diff_new.f90 -o diff_new.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c kodiss.f90 -o kodiss.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c kodiss_sh.f90 -o kodiss_sh.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c lopsidediff.f90 -o lopsidediff.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c sommerfeld_rout.f90 -o sommerfeld_rout.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c getnp4.f90 -o getnp4.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c diff_new_sh.f90 -o diff_new_sh.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c shellfunctions.f90 -o shellfunctions.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c bssn_rhs_ss.f90 -o bssn_rhs_ss.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c Set_Rho_ADM.f90 -o Set_Rho_ADM.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c getnp4EScalar.f90 -o getnp4EScalar.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c bssnEScalar_rhs.f90 -o bssnEScalar_rhs.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c bssn_constraint.f90 -o bssn_constraint.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c ricci_gamma.f90 -o ricci_gamma.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c fadmquantites_bssn.f90 -o fadmquantites_bssn.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c Z4c_rhs.f90 -o Z4c_rhs.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c Z4c_rhs_ss.f90 -o Z4c_rhs_ss.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c point_diff_new_sh.f90 -o point_diff_new_sh.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c cpbc.f90 -o cpbc.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c getnp4old.f90 -o getnp4old.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c NullEvol.f90 -o NullEvol.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c initial_null.f90 -o initial_null.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c initial_maxwell.f90 -o initial_maxwell.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c getnpem2.f90 -o getnpem2.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c empart.f90 -o empart.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c NullNews.f90 -o NullNews.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c fourdcurvature.f90 -o fourdcurvature.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c bssn2adm.f90 -o bssn2adm.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c adm_constraint.f90 -o adm_constraint.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c adm_ricci_gamma.f90 -o adm_ricci_gamma.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c scalar_rhs.f90 -o scalar_rhs.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c initial_scalar.f90 -o initial_scalar.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c NullEvol2.f90 -o NullEvol2.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c initial_null2.f90 -o initial_null2.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c NullNews2.f90 -o NullNews2.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c tool_f.f90 -o tool_f.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c expansion.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o expansion.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c expansion_Jacobian.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o expansion_Jacobian.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c patch.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o patch.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c coords.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o coords.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c patch_info.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o patch_info.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c patch_interp.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o patch_interp.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c patch_system.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o patch_system.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c tgrid.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o tgrid.o
+patch.C: In static member function ‘static AHFinderDirect::patch::integration_method AHFinderDirect::patch::decode_integration_method(const char*)’:
+patch.C:212:35: warning: control reaches end of non-void function [-Wreturn-type]
+  212 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+  213 |                                            "***** patch::decode_integration_method():\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  214 |                                            "        unknown method_string=\"%s\"!\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  215 |                                            method_string); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~
+patch.C: In member function ‘virtual fp AHFinderDirect::z_patch::plane_arc_length(const char*, int, int, int, int, int, int, int, AHFinderDirect::patch::integration_method) const’:
+patch.C:399:35: warning: control reaches end of non-void function [-Wreturn-type]
+  399 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+  400 |                                            "***** z_patch::plane_arc_length(): %s patch, plane=\"%s\", but\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  401 |                                            "                                   this patch doesn't contain that plane!\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  402 |                                            name(), plane); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~
+patch.C: In member function ‘virtual fp AHFinderDirect::x_patch::plane_arc_length(const char*, int, int, int, int, int, int, int, AHFinderDirect::patch::integration_method) const’:
+patch.C:440:35: warning: control reaches end of non-void function [-Wreturn-type]
+  440 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+  441 |                                            "***** x_patch::plane_arc_length(): %s patch, plane=\"%s\", but\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  442 |                                            "                                   this patch doesn't contain that plane!\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  443 |                                            name(), plane); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~
+patch.C: In member function ‘virtual fp AHFinderDirect::y_patch::plane_arc_length(const char*, int, int, int, int, int, int, int, AHFinderDirect::patch::integration_method) const’:
+patch.C:481:35: warning: control reaches end of non-void function [-Wreturn-type]
+  481 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+  482 |                                            "***** y_patch::plane_arc_length(): %s patch, plane=\"%s\", but\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  483 |                                            "                                   this patch doesn't contain that plane!\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  484 |                                            name(), plane); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c fd_grid.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o fd_grid.o
+patch.C: In static member function ‘static fp AHFinderDirect::patch::integration_coeff(integration_method, int, int)’:
+patch.C:640:35: warning: control reaches end of non-void function [-Wreturn-type]
+  640 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+  641 |                                            "***** patch::integration_coeff(): unknown method=(int)%d!\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  642 |                                            "                                  (this should never happen!)\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  643 |                                            int(method)); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~
+patch.C: In member function ‘AHFinderDirect::ghost_zone& AHFinderDirect::patch::ghost_zone_containing_noncorner_point(int, int) const’:
+patch.C:744:27: warning: control reaches end of non-void function [-Wreturn-type]
+  744 |                 error_exit(ERROR_EXIT,
+      |                 ~~~~~~~~~~^~~~~~~~~~~~
+  745 |                                    "***** patch::ghost_zone_containing_noncorner_point():\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  746 |                                    "        no ghost zone contains point (this should never happen)!\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  747 |                                    "        patch=%s irho=%d isigma=%d\n",
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  748 |                                    name(), irho, isigma); /*NOTREACHED*/
+      |                                    ~~~~~~~~~~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c ghost_zone.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o ghost_zone.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c array.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o array.o
+patch_system.C: In static member function ‘static int AHFinderDirect::patch_system::N_patches_of_type(patch_system_type)’:
+patch_system.C:1175:35: warning: control reaches end of non-void function [-Wreturn-type]
+ 1175 |                         error_exit(PANIC_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+ 1176 |                                            "***** patch_system::N_patches_of_type(): bad type=(int)%d!\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1177 |                                            "                                         (this should never happen!)\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1178 |                                            int(type_in)); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~
+patch_system.C: In static member function ‘static const char* AHFinderDirect::patch_system::name_of_type(patch_system_type)’:
+patch_system.C:1210:35: warning: control reaches end of non-void function [-Wreturn-type]
+ 1210 |                         error_exit(PANIC_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+ 1211 |                                            "***** patch_system::name_of_type(): bad type=(int)%d!\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1212 |                                            "                                    (this should never happen!)\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1213 |                                            int(type_in)); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~
+patch_system.C: In static member function ‘static AHFinderDirect::patch_system::patch_system_type AHFinderDirect::patch_system::type_of_name(const char*)’:
+patch_system.C:1244:35: warning: control reaches end of non-void function [-Wreturn-type]
+ 1244 |                         error_exit(PANIC_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+ 1245 |                                            "***** patch_system::type_of_name(): unknown name=\"%s\"!",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1246 |                                            name_in); /*NOTREACHED*/
+      |                                            ~~~~~~~~
+patch_system.C: In member function ‘const AHFinderDirect::patch& AHFinderDirect::patch_system::plus_or_minus_xyz_patch(bool, char) const’:
+patch_system.C:1271:27: warning: control reaches end of non-void function [-Wreturn-type]
+ 1271 |                 error_exit(ERROR_EXIT,
+      |                 ~~~~~~~~~~^~~~~~~~~~~~
+ 1272 |                                    "***** patch_system::plus_or_minus_xyz_patch():\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1273 |                                    "        can't find any %c%c patch!",
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1274 |                                    (is_plus ? '+' : '-'), ctype); /*NOTREACHED*/
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch_system.C: In member function ‘int AHFinderDirect::patch_system::patch_number_of_name(const char*) const’:
+patch_system.C:1292:27: warning: control reaches end of non-void function [-Wreturn-type]
+ 1292 |                 error_exit(ERROR_EXIT,
+      |                 ~~~~~~~~~~^~~~~~~~~~~~
+ 1293 |                                    "***** patch_system::patch_number_of_name():\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1294 |                                    "        no patch with name \"%s\"!\n",
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1295 |                                    name); /*NOTREACHED*/
+      |                                    ~~~~~
+patch_system.C: In member function ‘const AHFinderDirect::patch& AHFinderDirect::patch_system::patch_irho_isigma_of_gpn(int, int&, int&) const’:
+patch_system.C:1337:27: warning: control reaches end of non-void function [-Wreturn-type]
+ 1337 |                 error_exit(PANIC_EXIT,
+      |                 ~~~~~~~~~~^~~~~~~~~~~~
+ 1338 |                                    "***** patch_system::patch_irho_isigma_of_gpn(gpn=%d):\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1339 |                                    "        couldn't find any patch! (this should never happen!)\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1340 |                                    "        N_grid_points()=%d\n",
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1341 |                                    gpn,
+      |                                    ~~~~
+ 1342 |                                    N_grid_points()); /*NOTREACHED*/
+      |                                    ~~~~~~~~~~~~~~~~
+patch_system.C: In member function ‘const AHFinderDirect::patch& AHFinderDirect::patch_system::ghosted_patch_irho_isigma_of_gpn(int, int&, int&) const’:
+patch_system.C:1383:27: warning: control reaches end of non-void function [-Wreturn-type]
+ 1383 |                 error_exit(PANIC_EXIT,
+      |                 ~~~~~~~~~~^~~~~~~~~~~~
+ 1384 |                                    "***** patch_system::ghosted_patch_irho_isigma_of_gpn(gpn=%d):\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1385 |                                    "        couldn't find any patch! (this should never happen!)\n"
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1386 |                                    "        ghosted_N_grid_points()=%d\n",
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1387 |                                    gpn,
+      |                                    ~~~~
+ 1388 |                                    ghosted_N_grid_points()); /*NOTREACHED*/
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+patch_system.C: In member function ‘const AHFinderDirect::patch* AHFinderDirect::patch_system::patch_containing_local_xyz(fp, fp, fp) const’:
+patch_system.C:1737:35: warning: control reaches end of non-void function [-Wreturn-type]
+ 1737 |                         error_exit(ERROR_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+ 1738 |                                            "***** patch_system::patch_containing_local_xyz():\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1739 |                                            "        unknown (wierd!) ordering of |x|, |y|, and |z|!\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1740 |                                            "        (this should never happen!)\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1741 |                                            "        [local] (x,y,z)=(%g,%g,%g)\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1742 |                                            double(x), double(y), double(z)); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch_system.C: In member function ‘const AHFinderDirect::patch_edge& AHFinderDirect::patch_system::synchronize_Jacobian(const AHFinderDirect::ghost_zone&, int, int, int&, int&, int&, int&, AHFinderDirect::jtutil::array1d<double>&) const’:
+patch_system.C:2373:35: warning: control reaches end of non-void function [-Wreturn-type]
+ 2373 |                         error_exit(PANIC_EXIT,
+      |                         ~~~~~~~~~~^~~~~~~~~~~~
+ 2374 |                                            "***** patch_system::synchronize_Jacobian():\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2375 |                                            "        don't know what to do with ghost zone (this should never happen)!\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2376 |                                            "        xgz.my_patch()=\"%s\"    xe=xgz.my_edge()=\"%s\"\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2377 |                                            "        xgz.other_patch()=\"%s\"    xgz.other_edge()=\"%s\"\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2378 |                                            "        xgz.is_symmetry()=(int)%d xgz.is_interpatch()=(int)%d\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2379 |                                            "        x_iperp=%d x_ipar=%d\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2380 |                                            "        xe.ipar_is_in_{min,max}_ipar_corner(x_ipar)=(int){%d,%d}\n"
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2381 |                                            "        xe.ipar_is_in_{corner,noncorner}(x_ipar)=(int){%d,%d}\n",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2382 |                                            xgz.my_patch().name(), xe.name(),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2383 |                                            xgz.other_patch().name(), xgz.other_edge().name(),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2384 |                                            int(xgz.is_symmetry()), int(xgz.is_interpatch()),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2385 |                                            x_iperp, x_ipar,
+      |                                            ~~~~~~~~~~~~~~~~
+ 2386 |                                            xe.ipar_is_in_min_ipar_corner(x_ipar),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2387 |                                            xe.ipar_is_in_max_ipar_corner(x_ipar),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2388 |                                            xe.ipar_is_in_corner(x_ipar),
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2389 |                                            xe.ipar_is_in_noncorner(x_ipar)); /*NOTREACHED*/
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c round.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o round.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c norm.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o norm.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c fuzzy.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o fuzzy.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c error_exit.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o error_exit.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c miscfp.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o miscfp.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c linear_map.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o linear_map.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c cpm_map.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o cpm_map.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c BH_diagnostics.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o BH_diagnostics.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c setup.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o setup.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c horizon_sequence.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o horizon_sequence.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c find_horizons.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o find_horizons.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c initial_guess.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o initial_guess.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Newton.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Newton.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c Jacobian.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o Jacobian.o
+mpif90 -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -x f95-cpp-input -ffree-line-length-none -Wno-line-truncation -Wno-error=line-truncation -c ilucg.f90 -o ilucg.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c IntPnts0.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o IntPnts0.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c IntPnts.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o IntPnts.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c misc.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o misc.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -o ABE ABE.o Ansorg.o Block.o misc.o monitor.o Parallel.o MPatch.o var.o cgh.o bssn_class.o surface_integral.o ShellPatch.o bssnEScalar_class.o perf.o Z4c_class.o NullShellPatch.o bssnEM_class.o cpbc_util.o z4c_rhs_point.o checkpoint.o Parallel_bam.o scalar_class.o transpbh.o NullShellPatch2.o NullShellPatch2_Evo.o writefile_f.o enforce_algebra.o fmisc.o initial_puncture.o prolongrestrict.o prolongrestrict_cell.o prolongrestrict_vertex.o rungekutta4_rout.o bssn_rhs.o diff_new.o kodiss.o kodiss_sh.o lopsidediff.o sommerfeld_rout.o getnp4.o diff_new_sh.o shellfunctions.o bssn_rhs_ss.o Set_Rho_ADM.o getnp4EScalar.o bssnEScalar_rhs.o bssn_constraint.o ricci_gamma.o fadmquantites_bssn.o Z4c_rhs.o Z4c_rhs_ss.o point_diff_new_sh.o cpbc.o getnp4old.o NullEvol.o initial_null.o initial_maxwell.o getnpem2.o empart.o NullNews.o fourdcurvature.o bssn2adm.o adm_constraint.o adm_ricci_gamma.o scalar_rhs.o initial_scalar.o NullEvol2.o initial_null2.o NullNews2.o tool_f.o zbesh.o expansion.o expansion_Jacobian.o patch.o coords.o patch_info.o patch_interp.o patch_system.o tgrid.o fd_grid.o ghost_zone.o array.o round.o norm.o fuzzy.o error_exit.o miscfp.o linear_map.o cpm_map.o BH_diagnostics.o setup.o horizon_sequence.o find_horizons.o initial_guess.o Newton.o Jacobian.o ilucg.o IntPnts0.o IntPnts.o -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -L/usr/lib/gcc/x86_64-linux-gnu/11 -lgfortran -lmpi -fopenmp
+lto-wrapper: warning: using serial compilation of 12 LTRANS jobs
+lto-wrapper: note: see the ‘-flto’ option documentation for more information
+
+ Compilation of the AMSS-NCKU executable file ABE is finished 
+
+
+ Compiling the AMSS-NCKU executable file TwoPunctureABE 
+
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c TwoPunctureABE.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o TwoPunctureABE.o
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -c TwoPunctures.C -I/usr/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/include/ -I/usr/lib/x86_64-linux-gnu/openmpi/lib/ -I/usr/lib/gcc/x86_64-linux-gnu/11/ -I/usr/include/c++/11/ -o TwoPunctures.o
+TwoPunctureABE.C: In function ‘int main(int, char**)’:
+TwoPunctureABE.C:215:13: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  215 |   ADM->Save("Ansorg.psid");
+      |             ^~~~~~~~~~~~~
+mpicxx -O3 -march=znver4 -flto -fno-math-errno -funroll-loops -fopenmp -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -mprefer-vector-width=512 -Wno-deprecated -Dfortran3 -Dnewc -std=c++14 -o TwoPunctureABE TwoPunctureABE.o TwoPunctures.o  -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -L/usr/lib/gcc/x86_64-linux-gnu/11 -lgfortran -lmpi -fopenmp
+
+ Compilation of the AMSS-NCKU executable file TwoPunctureABE is finished 
+
+
+
+ Initial data is chosen as Ansorg-TwoPuncture
+
+
+ Automatically generating the input parfile for the TwoPunctureABE executable 
+
+
+ The input parfile for the TwoPunctureABE executable has been generated. 
+
+
+
+
+ Running the AMSS-NCKU executable file TwoPunctureABE 
+
+///////////////////////////////////////////////////////////////
+     mp     = -1
+     mm     = -1
+     b      = 5
+  P_plusx   = -0.000845415
+  P_plusy   = 0.0953015
+  P_plusz   = 0
+  P_minusx  = 0.000845415
+  P_minusy  = -0.0953015
+  P_minusz  = 0
+  S_plusx   = 0
+  S_plusy   = -0
+  S_plusz   = 0.0950911
+  S_minusx  = 0
+  S_minusy  = -0
+  S_minusz  = -0.0915645
+     Mp     = 0.553846
+     Mm     = 0.446154
+   admtol   = 1e-08
+ Newtontol  = 5e-12
+    nA      = 50
+    nB      = 50
+   nphi     = 26
+Newtonmaxit = 50
+///////////////////////////////////////////////////////////////
+Attempting to find bare masses.
+Target ADM masses: M_p=0.553846 and M_m=0.446154
+ADM mass tolerance: 1e-08
+Bare masses: mp=-1, mm=-1
+Newton: it=0 	 |F|=3.068260e-02
+bare mass: mp=0.553846 	 mm=0.446154
+bicgstab:  itmax 100, tol 3.068260e-05
+bicgstab:     0   1.366e+00
+bicgstab:     1   4.256e+00   1.069e+00   0.000e+00   5.233e-01
+bicgstab:     2   6.633e+00   3.158e+00   4.084e-02   6.106e-01
+bicgstab:     3   3.581e+00   8.311e-01   3.694e-01   6.584e-01
+bicgstab:     4   1.274e+00   9.982e-01   2.470e-01   5.270e-01
+bicgstab:     5   1.339e+00   3.287e+00   2.260e-01   4.272e-01
+bicgstab:     6   1.312e-01   2.004e-01  -3.652e+00   2.448e+00
+bicgstab:     7   9.817e-03   1.243e+00  -9.975e-02   4.477e-01
+bicgstab:     8   1.698e-03   1.272e+00   1.953e-01   9.239e-01
+bicgstab:     9   7.728e-04   1.087e+00   4.785e-01   1.048e+00
+bicgstab:    10   4.820e-04   1.101e+00   3.316e-01   8.663e-01
+bicgstab:    11   2.111e-04   1.009e+00   3.637e-01   1.070e+00
+bicgstab:    12   6.988e-05   1.333e+00   3.293e-01   4.434e-01
+bicgstab:    13   3.875e-05   9.721e-01   6.450e-01   2.674e+00
+bicgstab:    14   2.954e-05   7.499e-01   1.460e-01   2.674e+00
+Newton: it=1 	 |F|=1.149739e-03 
+ADM mass error: M_p_err=1.54193, M_m_err=1.46829
+Bare masses: mp=0.52329, mm=0.406224
+Newton: it=0 	 |F|=3.875666e-02
+bare mass: mp=0.52329 	 mm=0.406224
+bicgstab:  itmax 100, tol 3.875666e-05
+bicgstab:     0   5.945e-01
+bicgstab:     1   1.665e+00   1.056e+00   0.000e+00   5.479e-01
+bicgstab:     2   2.370e+00   3.045e+00   3.657e-02   5.545e-01
+bicgstab:     3   1.211e+00   8.741e-01   2.977e-01   6.325e-01
+bicgstab:     4   1.114e+00   4.237e+00   1.457e-01   4.001e-01
+bicgstab:     5   2.856e-02   1.014e-01  -2.586e+01   2.105e+00
+bicgstab:     6   1.878e-02   2.226e+00  -1.088e-02   2.057e+00
+bicgstab:     7   4.705e-03   8.273e-01   5.416e-01   3.727e-01
+bicgstab:     8   9.755e-04   1.259e+00   1.744e-01   1.603e+00
+bicgstab:     9   2.919e-04   1.083e+00   6.219e-01   5.162e-01
+bicgstab:    10   1.692e-04   9.834e-01   2.234e-01   1.626e+00
+bicgstab:    11   5.499e-05   1.223e+00   4.347e-01   6.209e-01
+bicgstab:    12   1.955e-05   1.071e+00   3.253e-01   6.209e-01
+Newton: it=1 	 |F|=1.824056e-04 
+ADM mass error: M_p_err=0.00465712, M_m_err=0.0113009
+Bare masses: mp=0.519168, mm=0.396261
+Newton: it=0 	 |F|=1.258682e-02
+bare mass: mp=0.519168 	 mm=0.396261
+bicgstab:  itmax 100, tol 1.258682e-05
+bicgstab:     0   1.849e-01
+bicgstab:     1   5.065e-01   1.054e+00   0.000e+00   5.547e-01
+bicgstab:     2   6.994e-01   2.976e+00   3.637e-02   5.459e-01
+bicgstab:     3   3.406e-01   6.823e-01   3.865e-01   1.035e+00
+bicgstab:     4   1.167e-01   9.181e-01   1.889e-01   5.211e-01
+bicgstab:     5   1.601e-02   1.126e+00   2.761e-01   4.387e-01
+bicgstab:     6   7.248e-03   1.382e+00   6.710e-01   2.360e+00
+bicgstab:     7   7.540e-04   7.519e-01   3.944e-01   4.126e-01
+bicgstab:     8   3.784e-04   1.170e+00   1.614e-01   2.585e+00
+bicgstab:     9   1.277e-04   1.138e+00   6.536e-01   5.329e-01
+bicgstab:    10   4.919e-05   9.679e-01   2.439e-01   1.122e+00
+bicgstab:    11   9.514e-06   1.286e+00   4.781e-01   5.486e-01
+Newton: it=1 	 |F|=1.741524e-05 
+ADM mass error: M_p_err=0.000750349, M_m_err=0.0033868
+Bare masses: mp=0.518538, mm=0.393286
+Newton: it=0 	 |F|=4.045263e-03
+bare mass: mp=0.518538 	 mm=0.393286
+bicgstab:  itmax 100, tol 4.045263e-06
+bicgstab:     0   5.824e-02
+bicgstab:     1   1.585e-01   1.053e+00   0.000e+00   5.568e-01
+bicgstab:     2   2.164e-01   2.938e+00   3.644e-02   5.445e-01
+bicgstab:     3   9.486e-02   6.236e-01   4.553e-01   1.321e+00
+bicgstab:     4   2.948e-02   8.995e-01   1.669e-01   5.333e-01
+bicgstab:     5   5.129e-03   1.081e+00   2.558e-01   4.993e-01
+bicgstab:     6   3.204e-03   1.528e+00   6.036e-01   2.227e+00
+bicgstab:     7   5.227e-04   7.646e-01   4.661e-01   4.413e-01
+bicgstab:     8   1.911e-04   1.072e+00   1.303e-01   1.553e+00
+bicgstab:     9   6.158e-05   1.307e+00   6.020e-01   5.534e-01
+bicgstab:    10   2.880e-05   9.723e-01   3.119e-01   1.239e+00
+bicgstab:    11   7.307e-06   1.284e+00   4.752e-01   5.322e-01
+bicgstab:    12   3.032e-06   7.354e-01   1.982e-01   9.782e-01
+Newton: it=1 	 |F|=1.726269e-06 
+ADM mass error: M_p_err=0.000129723, M_m_err=0.00105375
+Bare masses: mp=0.518439, mm=0.392361
+Newton: it=0 	 |F|=1.285934e-03
+bare mass: mp=0.518439 	 mm=0.392361
+bicgstab:  itmax 100, tol 1.285934e-06
+bicgstab:     0   1.841e-02
+bicgstab:     1   5.002e-02   1.053e+00   0.000e+00   5.575e-01
+bicgstab:     2   6.857e-02   2.998e+00   3.631e-02   5.397e-01
+bicgstab:     3   3.406e-02   7.233e-01   3.359e-01   8.947e-01
+bicgstab:     4   1.201e-02   9.358e-01   1.772e-01   4.994e-01
+bicgstab:     5   6.174e-04   1.330e+00   2.453e-01   4.027e-01
+bicgstab:     6   2.110e-04   1.403e+00   7.480e-01   2.330e+00
+bicgstab:     7   9.394e-05   1.010e+00   2.000e-01   4.066e-01
+bicgstab:     8   2.573e-05   1.461e-01  -1.321e-01   4.951e+00
+bicgstab:     9   8.056e-06   5.020e+00  -5.017e-01   1.999e+00
+bicgstab:    10   3.395e-06   1.028e+00   8.638e-01   1.180e+00
+bicgstab:    11   1.402e-06   1.235e+00   4.957e-01   4.869e-01
+bicgstab:    12   4.361e-07   5.953e-01   2.583e-01   4.869e-01
+Newton: it=1 	 |F|=1.714170e-07 
+ADM mass error: M_p_err=2.4593e-05, M_m_err=0.000331605
+Bare masses: mp=0.518423, mm=0.39207
+Newton: it=0 	 |F|=4.074755e-04
+bare mass: mp=0.518423 	 mm=0.39207
+bicgstab:  itmax 100, tol 4.074755e-07
+bicgstab:     0   5.823e-03
+bicgstab:     1   1.581e-02   1.052e+00   0.000e+00   5.576e-01
+bicgstab:     2   2.143e-02   2.907e+00   3.582e-02   5.448e-01
+bicgstab:     3   1.021e-02   6.616e-01   4.026e-01   1.125e+00
+bicgstab:     4   3.405e-03   9.299e-01   1.836e-01   5.155e-01
+bicgstab:     5   5.433e-04   1.067e+00   2.854e-01   4.794e-01
+bicgstab:     6   3.505e-04   1.332e+00   5.674e-01   2.266e+00
+bicgstab:     7   6.372e-05   7.781e-01   3.916e-01   4.151e-01
+bicgstab:     8   1.680e-05   1.348e+00   1.989e-01   2.585e+00
+bicgstab:     9   4.985e-06   1.024e+00   7.689e-01   5.252e-01
+bicgstab:    10   2.295e-06   9.112e-01   1.534e-01   1.749e+00
+bicgstab:    11   3.328e-07   1.594e+00   5.036e-01   5.322e-01
+Newton: it=1 	 |F|=6.193471e-08 
+ADM mass error: M_p_err=5.26095e-06, M_m_err=0.000104719
+Bare masses: mp=0.518421, mm=0.391978
+Newton: it=0 	 |F|=1.289691e-04
+bare mass: mp=0.518421 	 mm=0.391978
+bicgstab:  itmax 100, tol 1.289691e-07
+bicgstab:     0   1.842e-03
+bicgstab:     1   5.000e-03   1.052e+00   0.000e+00   5.577e-01
+bicgstab:     2   6.772e-03   2.899e+00   3.612e-02   5.453e-01
+bicgstab:     3   2.912e-03   6.161e-01   4.704e-01   1.375e+00
+bicgstab:     4   8.819e-04   9.152e-01   1.630e-01   5.223e-01
+bicgstab:     5   1.543e-04   1.066e+00   2.611e-01   5.179e-01
+bicgstab:     6   1.056e-04   1.460e+00   5.644e-01   2.167e+00
+bicgstab:     7   2.472e-05   7.817e-01   4.467e-01   4.719e-01
+bicgstab:     8   9.217e-06   1.194e+00   1.614e-01   1.097e+00
+bicgstab:     9   2.622e-06   1.168e+00   6.892e-01   7.104e-01
+bicgstab:    10   1.426e-06   9.191e-01   2.150e-01   1.226e+00
+bicgstab:    11   3.752e-07   1.482e+00   4.739e-01   4.496e-01
+bicgstab:    12   1.252e-07   7.462e-01   2.694e-01   1.357e+00
+Newton: it=1 	 |F|=2.387210e-08 
+ADM mass error: M_p_err=1.28068e-06, M_m_err=3.31057e-05
+Bare masses: mp=0.51842, mm=0.391949
+Newton: it=0 	 |F|=4.080363e-05
+bare mass: mp=0.51842 	 mm=0.391949
+bicgstab:  itmax 100, tol 4.080363e-08
+bicgstab:     0   5.827e-04
+bicgstab:     1   1.582e-03   1.053e+00   0.000e+00   5.578e-01
+bicgstab:     2   2.196e-03   3.127e+00   3.618e-02   5.319e-01
+bicgstab:     3   2.260e-03  -6.631e-01   8.732e-02   4.736e-01
+bicgstab:     4   8.937e-05  -5.946e-01  -4.568e+00   2.253e+00
+bicgstab:     5   1.924e-05   1.211e+00  -4.645e-02   4.414e-01
+bicgstab:     6   6.340e-06   1.741e+00   5.364e-01   1.695e+00
+bicgstab:     7   3.006e-06   7.838e-01   5.263e-01   1.042e+00
+bicgstab:     8   1.688e-06   1.036e+00   1.118e-01   7.994e-01
+bicgstab:     9   5.946e-07   1.439e+00   5.855e-01   7.600e-01
+bicgstab:    10   2.498e-07   9.822e-01   3.729e-01   5.193e-01
+bicgstab:    11   5.763e-08   1.233e+00   4.757e-01   5.293e-01
+bicgstab:    12   2.682e-08   5.959e-01   1.308e-01   1.646e+00
+Newton: it=1 	 |F|=4.047076e-09 
+ADM mass error: M_p_err=3.46062e-07, M_m_err=1.04697e-05
+Bare masses: mp=0.51842, mm=0.39194
+Newton: it=0 	 |F|=1.290757e-05
+bare mass: mp=0.51842 	 mm=0.39194
+bicgstab:  itmax 100, tol 1.290757e-08
+bicgstab:     0   1.843e-04
+bicgstab:     1   5.002e-04   1.052e+00   0.000e+00   5.577e-01
+bicgstab:     2   6.770e-04   2.894e+00   3.615e-02   5.455e-01
+bicgstab:     3   2.868e-04   6.113e-01   4.788e-01   1.407e+00
+bicgstab:     4   8.581e-05   9.133e-01   1.599e-01   5.233e-01
+bicgstab:     5   1.555e-05   1.059e+00   2.583e-01   5.348e-01
+bicgstab:     6   1.076e-05   1.473e+00   5.538e-01   2.119e+00
+bicgstab:     7   2.829e-06   7.824e-01   4.523e-01   5.224e-01
+bicgstab:     8   1.070e-06   1.201e+00   1.576e-01   8.492e-01
+bicgstab:     9   2.956e-07   1.179e+00   6.937e-01   8.744e-01
+bicgstab:    10   1.801e-07   9.328e-01   2.151e-01   9.280e-01
+bicgstab:    11   5.743e-08   1.476e+00   4.872e-01   4.313e-01
+bicgstab:    12   1.500e-08   7.451e-01   2.439e-01   1.841e+00
+bicgstab:    13   1.038e-08   2.452e+00   3.719e-01   4.107e-01
+Newton: it=1 	 |F|=2.205747e-09 
+ADM mass error: M_p_err=1.0033e-07, M_m_err=3.3114e-06
+Bare masses: mp=0.51842, mm=0.391937
+Newton: it=0 	 |F|=4.082830e-06
+bare mass: mp=0.51842 	 mm=0.391937
+bicgstab:  itmax 100, tol 4.082830e-09
+bicgstab:     0   5.830e-05
+bicgstab:     1   1.582e-04   1.052e+00   0.000e+00   5.577e-01
+bicgstab:     2   2.146e-04   2.916e+00   3.557e-02   5.440e-01
+bicgstab:     3   1.078e-04   7.164e-01   3.515e-01   9.216e-01
+bicgstab:     4   3.649e-05   9.925e-01   1.883e-01   4.823e-01
+bicgstab:     5   1.658e-06   1.284e+00   2.703e-01   4.022e-01
+bicgstab:     6   8.206e-07   1.441e+00   5.760e-01   2.381e+00
+bicgstab:     7   4.728e-07   1.525e-01  -1.037e-01   4.185e-01
+bicgstab:     8   1.010e-07   3.399e+00  -4.846e-01   4.560e+00
+bicgstab:     9   4.334e-08   1.301e+00   1.360e+00   2.071e+00
+bicgstab:    10   9.817e-09   9.059e-01   1.549e-01   5.943e-01
+bicgstab:    11   3.530e-09   1.724e+00   4.800e-01   3.873e-01
+Newton: it=1 	 |F|=5.146343e-10 
+ADM mass error: M_p_err=3.02983e-08, M_m_err=1.04735e-06
+Bare masses: mp=0.51842, mm=0.391936
+Newton: it=0 	 |F|=1.291342e-06
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 1.291342e-09
+bicgstab:     0   1.844e-05
+bicgstab:     1   5.003e-05   1.052e+00   0.000e+00   5.577e-01
+bicgstab:     2   6.753e-05   2.871e+00   3.542e-02   5.469e-01
+bicgstab:     3   3.222e-05   6.586e-01   4.115e-01   1.144e+00
+bicgstab:     4   1.058e-05   9.537e-01   1.859e-01   5.060e-01
+bicgstab:     5   1.611e-06   1.068e+00   2.940e-01   4.757e-01
+bicgstab:     6   1.047e-06   1.267e+00   5.461e-01   2.285e+00
+bicgstab:     7   2.060e-07   7.882e-01   3.671e-01   4.111e-01
+bicgstab:     8   4.548e-08   1.404e+00   2.258e-01   3.087e+00
+bicgstab:     9   1.455e-08   9.859e-01   7.995e-01   4.944e-01
+bicgstab:    10   5.277e-09   8.787e-01   1.331e-01   2.058e+00
+bicgstab:    11   8.418e-10   1.709e+00   4.819e-01   6.377e-01
+Newton: it=1 	 |F|=1.422308e-10 
+ADM mass error: M_p_err=9.377e-09, M_m_err=3.31261e-07
+Bare masses: mp=0.51842, mm=0.391936
+Newton: it=0 	 |F|=4.084553e-07
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 4.084553e-10
+bicgstab:     0   5.832e-06
+bicgstab:     1   1.583e-05   1.052e+00   0.000e+00   5.578e-01
+bicgstab:     2   2.147e-05   2.916e+00   3.572e-02   5.440e-01
+bicgstab:     3   1.047e-05   6.809e-01   3.809e-01   1.043e+00
+bicgstab:     4   3.555e-06   9.403e-01   1.865e-01   5.069e-01
+bicgstab:     5   5.049e-07   1.098e+00   2.817e-01   4.509e-01
+bicgstab:     6   3.053e-07   1.287e+00   5.962e-01   2.334e+00
+bicgstab:     7   4.475e-08   7.698e-01   3.701e-01   4.035e-01
+bicgstab:     8   6.020e-09   1.328e+00   2.118e-01   4.906e+00
+bicgstab:     9   6.501e-09   1.007e+00   7.729e-01   1.673e+00
+bicgstab:    10   6.205e-10   8.911e-01   1.556e-01   4.018e-01
+bicgstab:    11   2.264e-10   1.613e+00   4.845e-01   6.701e-01
+Newton: it=1 	 |F|=3.283403e-11 
+ADM mass error: M_p_err=2.93945e-09, M_m_err=1.04775e-07
+Bare masses: mp=0.51842, mm=0.391936
+Newton: it=0 	 |F|=1.291905e-07
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 1.291905e-10
+bicgstab:     0   1.845e-06
+bicgstab:     1   5.005e-06   1.052e+00   0.000e+00   5.577e-01
+bicgstab:     2   6.777e-06   2.899e+00   3.567e-02   5.451e-01
+bicgstab:     3   3.239e-06   6.629e-01   4.018e-01   1.120e+00
+bicgstab:     4   1.080e-06   9.354e-01   1.839e-01   5.122e-01
+bicgstab:     5   1.721e-07   1.069e+00   2.842e-01   4.767e-01
+bicgstab:     6   1.124e-07   1.306e+00   5.656e-01   2.259e+00
+bicgstab:     7   2.170e-08   7.804e-01   3.838e-01   4.154e-01
+bicgstab:     8   5.557e-09   1.350e+00   2.070e-01   2.572e+00
+bicgstab:     9   1.641e-09   1.022e+00   7.748e-01   5.462e-01
+bicgstab:    10   7.630e-10   8.970e-01   1.506e-01   1.814e+00
+bicgstab:    11   1.068e-10   1.629e+00   4.897e-01   5.610e-01
+Newton: it=1 	 |F|=2.196354e-11 
+ADM mass error: M_p_err=9.23622e-10, M_m_err=3.3139e-08
+Bare masses: mp=0.51842, mm=0.391936
+Newton: it=0 	 |F|=4.086155e-08
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 4.086155e-11
+bicgstab:     0   5.835e-07
+bicgstab:     1   1.583e-06   1.052e+00   0.000e+00   5.578e-01
+bicgstab:     2   2.149e-06   2.920e+00   3.601e-02   5.438e-01
+bicgstab:     3   9.894e-07   6.439e-01   4.211e-01   1.208e+00
+bicgstab:     4   3.229e-07   9.094e-01   1.754e-01   5.258e-01
+bicgstab:     5   5.579e-08   1.066e+00   2.680e-01   4.952e-01
+bicgstab:     6   3.715e-08   1.408e+00   5.784e-01   2.205e+00
+bicgstab:     7   7.675e-09   7.763e-01   4.278e-01   4.395e-01
+bicgstab:     8   2.567e-09   1.224e+00   1.707e-01   1.545e+00
+bicgstab:     9   7.398e-10   1.131e+00   7.114e-01   6.791e-01
+bicgstab:    10   3.630e-10   9.116e-01   1.990e-01   1.434e+00
+bicgstab:    11   7.246e-11   1.517e+00   4.765e-01   4.259e-01
+bicgstab:    12   3.542e-11   7.414e-01   2.775e-01   4.259e-01
+Newton: it=1 	 |F|=9.521797e-12 
+ADM mass error: M_p_err=2.91955e-10, M_m_err=1.04816e-08
+Bare masses: mp=0.51842, mm=0.391936
+Newton: it=0 	 |F|=1.292412e-08
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 1.292412e-11
+bicgstab:     0   1.845e-07
+bicgstab:     1   5.009e-07   1.053e+00   0.000e+00   5.578e-01
+bicgstab:     2   6.866e-07   3.009e+00   3.647e-02   5.385e-01
+bicgstab:     3   3.369e-07   7.089e-01   3.409e-01   9.348e-01
+bicgstab:     4   1.208e-07   8.978e-01   1.730e-01   5.174e-01
+bicgstab:     5   1.466e-08   1.201e+00   2.405e-01   4.228e-01
+bicgstab:     6   7.125e-09   1.425e+00   7.550e-01   2.318e+00
+bicgstab:     7   1.105e-09   7.003e-01   3.837e-01   4.240e-01
+bicgstab:     8   6.023e-10   9.913e-01   1.006e-01   2.080e+00
+bicgstab:     9   1.668e-10   1.544e+00   6.140e-01   4.167e-01
+bicgstab:    10   2.619e-11   1.016e+00   5.262e-01   1.729e+00
+bicgstab:    11   2.069e-11   9.982e-01   4.562e-01   7.385e-01
+bicgstab:    12   1.731e-11   3.233e-02   3.581e-03   8.838e-01
+bicgstab:    13   8.291e-12   2.580e+01  -9.198e-01   8.838e-01
+Newton: it=1 	 |F|=2.143298e-12 
+ADM mass error: M_p_err=9.22309e-11, M_m_err=3.31533e-09
+Found bare masses resulted Mp = 0.553846 and Mm = 0.446154
+Newton: it=0 	 |F|=4.087906e-09
+bare mass: mp=0.51842 	 mm=0.391936
+bicgstab:  itmax 100, tol 4.087906e-12
+bicgstab:     0   5.837e-08
+bicgstab:     1   1.584e-07   1.053e+00   0.000e+00   5.578e-01
+bicgstab:     2   2.174e-07   3.022e+00   3.571e-02   5.377e-01
+bicgstab:     3   6.602e-08   1.595e+00   1.939e-01   4.254e-01
+bicgstab:     4   6.660e-09   2.061e-01  -2.001e+00   2.301e+00
+bicgstab:     5   2.081e-09   1.446e+00  -5.312e-02   4.885e-01
+bicgstab:     6   7.448e-10   1.607e+00   5.204e-01   1.639e+00
+bicgstab:     7   3.779e-10   8.190e-01   4.633e-01   7.748e-01
+bicgstab:     8   1.934e-10   1.331e+00   1.783e-01   6.476e-01
+bicgstab:     9   6.443e-11   1.083e+00   7.532e-01   1.723e+00
+bicgstab:    10   3.114e-11   9.163e-01   1.648e-01   5.056e-01
+bicgstab:    11   5.114e-12   1.583e+00   5.015e-01   5.666e-01
+bicgstab:    12   1.977e-12   7.172e-01   2.757e-01   5.666e-01
+Newton: it=1 	 |F|=1.542905e-12 
+The two puncture masses are mp = 0.51842 and mm = 0.391936
+                   resulted Mp = 0.553846 and Mm = 0.446154
+The total ADM mass is 0.989946
+===============================================================
+Initial data is successfully producede!!
+
+ The TwoPunctureABE simulation is finished 
+
+
+ Successfully copy all AMSS-NCKU input parfile to target dictionary. 
+
+
+
+
+ Running the AMSS-NCKU executable file ABE/ABEGPU 
+
+
+ /////////////////////////////////////////////////////////////// 
+ AMSS-NCKU Begin !!! 
+ /////////////////////////////////////////////////////////////// 
+
+                                 new run
+   simulation with cpu numbers = 8
+               simulation time = (0, 5)
+ simulation steps for this run = 10000000
+                Courant number = 0.5
+            Initial Data Type: Numerical Ansorg TwoPuncture
+             Symmetry setting: Equatorial
+ Courant = 0.5
+ artificial dissipation for shell patches = 0.15
+ artificial dissipation for fixed levels = 0.15
+ artificial dissipation for moving levels = 0.15
+ Dumpt Time = 100
+ Check Time = 100
+ Analysis Time = 0.1
+ Analysis level = 0
+ checkfile = bssn.chk
+ fourth order finite difference is used
+///////////////////////////////////////////////////////////////
+-----------------------------------------------------------------------
+ spherical integration for wave form extraction with Gauss method      
+ N_phi   = 384
+ N_theta = 192
+-----------------------------------------------------------------------
+ chitiny = 1e-05
+ time refinement start from level #3
+ checkpoint class created 
+ BSSN class successfully created 
+ you have setted 167 grid functions.
+
+ cgh has levels: 9
+
+ level #0 has boxes: 1
+ #0 box is  (-320:320,-320:320,0:320).
+ level #1 has boxes: 1
+ #0 box is  (-160:160,-160:160,0:160).
+ level #2 has boxes: 1
+ #0 box is  (-80:80,-80:80,0:80).
+ level #3 has boxes: 1
+ #0 box is  (-40:40,-40:40,0:40).
+ level #4 has boxes: 1
+ #0 box is  (-20:20,-20:20,0:20).
+ level #5 has boxes: 2
+ #0 box is  (-5:5,-0.625:9.375,0:5).
+ #1 box is  (-5:5,-10.625:-0.625,0:5).
+ level #6 has boxes: 2
+ #0 box is  (-2.5:2.5,1.97917:6.97917,0:2.5).
+ #1 box is  (-2.5:2.5,-8.02083:-3.02083,0:2.5).
+ level #7 has boxes: 2
+ #0 box is  (-1.25:1.25,3.22917:5.72917,0:1.25).
+ #1 box is  (-1.25:1.25,-6.77083:-4.27083,0:1.25).
+ level #8 has boxes: 2
+ #0 box is  (-0.625:0.625,3.82813:5.07812,0:0.625).
+ #1 box is  (-0.625:0.625,-6.17187:-4.92188,0:0.625).
+
+ moving levels are lev #5--8
+
+ belong to level 0
+ shape: [96,96,48] resolution: [6.66667,6.66667,6.66667]
+ range:(-320:320,-320:320,0:320)
+ belong to level 1
+ shape: [96,96,48] resolution: [3.33333,3.33333,3.33333]
+ range:(-160:160,-160:160,0:160)
+ belong to level 2
+ shape: [96,96,48] resolution: [1.66667,1.66667,1.66667]
+ range:(-80:80,-80:80,0:80)
+ belong to level 3
+ shape: [96,96,48] resolution: [0.833333,0.833333,0.833333]
+ range:(-40:40,-40:40,0:40)
+ belong to level 4
+ shape: [96,96,48] resolution: [0.416667,0.416667,0.416667]
+ range:(-20:20,-20:20,0:20)
+ belong to level 5
+ shape: [48,51,24] resolution: [0.208333,0.208333,0.208333]
+ range:(-5:5,-1.25:9.375,0:5)
+ belong to level 5
+ shape: [48,51,24] resolution: [0.208333,0.208333,0.208333]
+ range:(-5:5,-10.625:-1.59317e-14,0:5)
+ belong to level 6
+ shape: [48,48,24] resolution: [0.104167,0.104167,0.104167]
+ range:(-2.5:2.5,1.97917:6.97917,0:2.5)
+ belong to level 6
+ shape: [48,48,24] resolution: [0.104167,0.104167,0.104167]
+ range:(-2.5:2.5,-8.02083:-3.02083,0:2.5)
+ belong to level 7
+ shape: [48,48,24] resolution: [0.0520833,0.0520833,0.0520833]
+ range:(-1.25:1.25,3.22917:5.72917,0:1.25)
+ belong to level 7
+ shape: [48,48,24] resolution: [0.0520833,0.0520833,0.0520833]
+ range:(-1.25:1.25,-6.77083:-4.27083,0:1.25)
+ belong to level 8
+ shape: [48,48,24] resolution: [0.0260417,0.0260417,0.0260417]
+ range:(-0.625:0.625,3.82813:5.07812,0:0.625)
+ belong to level 8
+ shape: [48,48,24] resolution: [0.0260417,0.0260417,0.0260417]
+ range:(-0.625:0.625,-6.17187:-4.92188,0:0.625)
+
+ initial information of 2 Black Hole(s) 
+        Mass           x           y           z              Px              Py          Pz          Sx          Sy          Sz
+     0.51842           0     4.46154           0      -0.0953015    -0.000845415           0           0           0   0.0950911
+    0.391936           0    -5.53846           0       0.0953015     0.000845415           0           0           0  -0.0915645
+
+ Read initial data from Ansorg's solver, please be sure the input parameters for black holes are puncture parameters!! 
+
+  reading data from Ansorg.psid
+  found data with dimensions 50 x 50 x 26 = 65000
+  bhx1 = 0
+  bhy1 = 4.46154
+  bhz1 = 0
+  bhx2 = 0
+  bhy2 = -5.53846
+  bhz2 = 0
+  read 65000 data lines
+
+
+ Before Evolve, it takes 5.61548 seconds
+
+
+ Timestep # 1: integrating to time: 0.416667    Computer used 57.93 seconds! 
+ Memory usage: current 6464/808/6464MB, peak 6814/851.8/6814MB
+
+ puncture position: no. 0 = (-0.00133511 4.46153 1.35373e-09)
+ puncture position: no. 1 = (0.00302945 -5.5384 7.3647e-08)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 2: integrating to time: 0.833333    Computer used 58.8153 seconds! 
+ Memory usage: current 6466/808.2/6466MB, peak 6816/852/6816MB
+
+ puncture position: no. 0 = (-0.0115113 4.46147 4.46282e-09)
+ puncture position: no. 1 = (0.0206158 -5.53805 3.71512e-08)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+
+ Timestep # 3: integrating to time: 1.25    Computer used 56.4146 seconds! 
+ Memory usage: current 6545/818.2/6545MB, peak 6817/852.1/6817MB
+
+ puncture position: no. 0 = (-0.0298429 4.46122 1.31256e-08)
+ puncture position: no. 1 = (0.0486338 -5.53742 1.00583e-07)
+
+ If you think the physical evolution time is enough for this simulation, please input 'stop' in the terminal to stop the MPI processes in the next evolution step ! 
+mpirun: Forwarding signal 18 to job
